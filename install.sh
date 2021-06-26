@@ -941,7 +941,7 @@ install_v2_h2() {
 
 }
 update_sh() {
-    ol_version=$(curl -L -s https://raw.githubusercontent.com/itsgelogomayee/v2ray/${github_branch}/install.sh | grep "shell_version=" | head -1 | awk -F '=|"' '{print $3}')
+    ol_version=$(curl -L -s https://raw.githubusercontent.com/xamjyss020820/v2ray/${github_branch}/install.sh | grep "shell_version=" | head -1 | awk -F '=|"' '{print $3}')
     echo "$ol_version" >$version_cmp
     echo "$shell_version" >>$version_cmp
     if [[ "$shell_version" < "$(sort -rV $version_cmp | head -1)" ]]; then
@@ -949,9 +949,9 @@ update_sh() {
         read -r update_confirm
         case $update_confirm in
         [yY][eE][sS] | [yY])
-            wget -N --no-check-certificate https://raw.githubusercontent.com/itsgelogomayee/v2ray/${github_branch}/install.sh
+            wget -N --no-check-certificate https://raw.githubusercontent.com/xamjyss020820/v2ray/${github_branch}/install.sh
             echo -e "${OK} ${GreenBG} update completed ${Font}"
-            exit 0
+            chmod +x install.sh && bash install.sh
             ;;
         *) ;;
 
