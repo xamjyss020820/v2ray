@@ -136,8 +136,6 @@ rm -rf /tmp/abonv*
 echo -e "$DOMAIN_NAME_TLD" > /tmp/abonv_mydns_domain
 echo -e "$MYDNS" > /tmp/abonv_mydns
 echo -e "$MYDNS_ID" > /tmp/abonv_mydns_id
-function  Instupdate() {
- export DEBIAN_FRONTEND=noninteractive
 
 clear
 v2path="xamjyss143"
