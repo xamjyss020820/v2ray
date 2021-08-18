@@ -107,7 +107,7 @@ if [[ "$IPADDR" == "$CHECK_IP_RECORD" ]]; then
  echo -e ""
  else
 
-PAYLOAD="ws"
+
 echo -e "Your IP Address:\033[0;35m $IPADDR\033[0m"
 read -p "Enter desired servername: "  servername
 
@@ -115,7 +115,7 @@ read -p "Enter desired servername: "  servername
 ### Creating a DNS Record
 function CreateRecord(){
 TMP_FILE2='/tmp/abonv2.txt'
-curl -sX POST "https://api.cloudflare.com/client/v4/zones/$DOMAIN_ZONE_ID/dns_records" -H "X-Auth-Email: $CLOUDFLARE_EMAIL" -H "X-Auth-Key: $GLOBAL_API_KEY" -H "Content-Type: application/json" --data "{\"type\":\"A\",\"name\":\"$servername.$PAYLOAD\",\"content\":\"$IPADDR\",\"ttl\":86400,\"proxied\":false}" | python -m json.tool > "$TMP_FILE2"
+curl -sX POST "https://api.cloudflare.com/client/v4/zones/$DOMAIN_ZONE_ID/dns_records" -H "X-Auth-Email: $CLOUDFLARE_EMAIL" -H "X-Auth-Key: $GLOBAL_API_KEY" -H "Content-Type: application/json" --data "{\"type\":\"A\",\"name\":\"$servername\",\"content\":\"$IPADDR\",\"ttl\":86400,\"proxied\":false}" | python -m json.tool > "$TMP_FILE2"
 
 cat < "$TMP_FILE2" | jq '.result' | jq 'del(.meta)' | jq 'del(.created_on,.locked,.modified_on,.proxiable,.proxied,.ttl,.type,.zone_id,.zone_name)' > /tmp/abonv22.txt
 rm -f "$TMP_FILE2"
