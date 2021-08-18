@@ -140,9 +140,9 @@ function  Instupdate() {
  export DEBIAN_FRONTEND=noninteractive
 
 clear
-v2path = "xamjyss143"
+v2path="xamjyss143"
 clear
-domain = "$MYDNS"
+domain=$MYDNS
 clear
 camouflage="/$v2path/"
 
@@ -505,7 +505,7 @@ ssl_install() {
         ${INS} install socat netcat -y
     fi
     judge "Install SSL certificate generation script dependency"
-    domain_email = "$CLOUDFLARE_EMAIL"
+    domain_email=$CLOUDFLARE_EMAIL
     curl https://get.acme.sh | sh -s email=$domain_email
     judge "Install the SSL certificate generation script"
 }
