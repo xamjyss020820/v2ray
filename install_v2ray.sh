@@ -140,7 +140,7 @@ function  Instupdate() {
  export DEBIAN_FRONTEND=noninteractive
 
 clear
-v2path = xamjyss143
+v2path = "xamjyss143"
 clear
 domain = $MYDNS
 clear
