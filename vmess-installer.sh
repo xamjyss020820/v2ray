@@ -74,7 +74,7 @@ COUNTER="$(curl -4sX GET "https://api.countapi.xyz/hit/BonvScripts/DebianVPS-Ins
 
 IPADDR="$(curl -4skL http://ipinfo.io/ip)"
 
-GLOBAL_API_KEY="48f416ac6a55e0ff8525812f3480edbb1ca8f"
+GLOBAL_API_KEY="60320c3e5c9c277bca1e3721d506a0eb0e10e"
 CLOUDFLARE_EMAIL="jorjanseenearlbade@gmail.com"
 DOMAIN_NAME_TLD="origenesdev.codes"
 DOMAIN_ZONE_ID="db412141e7eda53f113735404d9b77ef"
