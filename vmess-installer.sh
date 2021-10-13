@@ -66,6 +66,8 @@ random_num=$((RANDOM%12+4))
  apt-get update
  apt-get upgrade -y
  gem install lolcat
+ apt-get install lolcat -y
+ sudo apt install python -y
  clear
 [[ ! "$(command -v curl)" ]] && apt install curl -y -qq
 [[ ! "$(command -v jq)" ]] && apt install jq -y -qq
