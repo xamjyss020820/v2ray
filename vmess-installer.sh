@@ -78,8 +78,8 @@ IPADDR="$(curl -4skL http://ipinfo.io/ip)"
 
 GLOBAL_API_KEY="60320c3e5c9c277bca1e3721d506a0eb0e10e"
 CLOUDFLARE_EMAIL="jorjanseenearlbade@gmail.com"
-DOMAIN_NAME_TLD="origenesdev.codes"
-DOMAIN_ZONE_ID="db412141e7eda53f113735404d9b77ef"
+DOMAIN_NAME_TLD="v2ray.live"
+DOMAIN_ZONE_ID="0f051f22173c94e78b5f86a21a83d408"
 ### DNS hostname / Payload here
 ## Setting variable
 
