@@ -838,10 +838,10 @@ read -p "Enter Panel Host: "  db_hostname
 read -p "Enter Panel location: "  db_location
 read -p "Enter Panel flag: "  db_flag
 	mysql -uxamjyssvpn -pXamjyss14302082020! -h162.216.115.91 -e"USE xamjyssvpn
-	INSERT INTO v2_ray_servers (id, name, address, host, status, uuid, path, root, hostip, password, alterid, port) VALUES ('', '$db_hostname', '$MYDNS', '$MYDNS', '$MYDNS', '$UUID', '$camouflage', 'root', '$IPADDR', '$db_root_password', '2', '443');"
+	INSERT INTO v2_ray_servers (id, name, address, host, status, uuid, path, root, hostip, password, alterid, port) VALUES ('', '$db_hostname', '$MYDNS', '$MYDNS', '1', '$UUID', '$camouflage', 'root', '$IPADDR', '$db_root_password', '2', '443');"
 	
 	mysql -ucoronassh.com -pXamjyss14302082020! -h162.216.115.91 -e"USE coronassh.com
-	INSERT INTO v2_ray_servers (id, name, address, host, status, uuid, path, root, hostip, password, alterid, port) VALUES ('', '$db_hostname', '$MYDNS', '$MYDNS', '$MYDNS', '$UUID', '$camouflage', 'root', '$IPADDR', '$db_root_password', '2', '443');"
+	INSERT INTO v2_ray_servers (id, name, address, host, status, uuid, path, root, hostip, password, alterid, port) VALUES ('', '$db_hostname', '$MYDNS', '$MYDNS', '1', '$UUID', '$camouflage', 'root', '$IPADDR', '$db_root_password', '2', '443');"
 
 
 }
