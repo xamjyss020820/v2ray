@@ -76,10 +76,10 @@ COUNTER="$(curl -4sX GET "https://api.countapi.xyz/hit/BonvScripts/DebianVPS-Ins
 
 IPADDR="$(curl -4skL http://ipinfo.io/ip)"
 
-GLOBAL_API_KEY="60320c3e5c9c277bca1e3721d506a0eb0e10e"
+GLOBAL_API_KEY="40bbb4c8d412654b29e686ffffac3c1557cec"
 CLOUDFLARE_EMAIL="jorjanseenearlbade@gmail.com"
-DOMAIN_NAME_TLD="v2ray.live"
-DOMAIN_ZONE_ID="0f051f22173c94e78b5f86a21a83d408"
+DOMAIN_NAME_TLD="xamjyssvpn.party"
+DOMAIN_ZONE_ID="a815cdecb7a5faefe5a9a169db33c167"
 ### DNS hostname / Payload here
 ## Setting variable
 
