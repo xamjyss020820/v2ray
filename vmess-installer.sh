@@ -807,10 +807,8 @@ basic_information() {
     } >"${v2ray_info_file}"
 }
 show_information() {
-    clear
-    cat "${v2ray_info_file}"
-    
-    sudo apt install mariadb-server
+
+ sudo apt install mariadb-server
 #fonts color
 Green="\033[32m"
 Red="\033[31m"
@@ -819,7 +817,7 @@ GreenBG="\033[42;37m"
 RedBG="\033[41;37m"
 Font="\033[0m"
     echo -e "—————————————— Select Root Password Type ——————————————"""
-    echo -e "${Yellow}1.${Font}  ROOT"
+    echo -e "${Green}1.${Font}  ROOT"
     echo -e "${Green}2.${Font}  DO \n"
     
 read -rp "Please select VPS password：" menu_num1
@@ -835,8 +833,6 @@ read -rp "Please select VPS password：" menu_num1
         ;;
     esac
 read -p "Enter Panel Host: "  db_hostname
-read -p "Enter Panel location: "  db_location
-read -p "Enter Panel flag: "  db_flag
 	mysql -uxamjyssvpn -pXamjyss14302082020! -h162.216.115.91 -e"USE xamjyssvpn
 	INSERT INTO v2_ray_servers (id, name, address, host, status, uuid, path, root, hostip, password, alterid, port) VALUES ('', '$db_hostname', '$MYDNS', '$MYDNS', '1', '$UUID', '$camouflage', 'root', '$IPADDR', '$db_root_password', '2', '443');"
 	
@@ -844,6 +840,11 @@ read -p "Enter Panel flag: "  db_flag
 	INSERT INTO v2_ray_servers (id, name, address, host, status, uuid, path, root, hostip, password, alterid, port) VALUES ('', '$db_hostname', '$MYDNS', '$MYDNS', '1', '$UUID', '$camouflage', 'root', '$IPADDR', '$db_root_password', '2', '443');"
 
 
+
+    clear
+    cat "${v2ray_info_file}"
+    
+   
 }
 
 add_v2rayclient() {
