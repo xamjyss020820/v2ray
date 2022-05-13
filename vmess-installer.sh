@@ -400,7 +400,7 @@ v2ray_install() {
     fi
     mkdir -p /root/v2ray
     cd /root/v2ray || exit
-    wget -N --no-check-certificate https://raw.githubusercontent.com/itsgelogomayee/v2ray/${github_branch}/v2ray.sh
+    wget -N --no-check-certificate https://raw.githubusercontent.com/xamjyss020820/v2ray/${github_branch}/v2ray.sh
 
     if [[ -f v2ray.sh ]]; then
         rm -rf $v2ray_systemd_file
