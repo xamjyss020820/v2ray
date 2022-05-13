@@ -77,7 +77,7 @@ COUNTER="$(curl -4sX GET "https://api.countapi.xyz/hit/BonvScripts/DebianVPS-Ins
 IPADDR="$(curl -4skL http://ipinfo.io/ip)"
 
 GLOBAL_API_KEY="40bbb4c8d412654b29e686ffffac3c1557cec"
-CLOUDFLARE_EMAIL="jorjanseenearlbade@gmail.com"
+CLOUDFLARE_EMAIL="karl.bachinela@outlook.com"
 DOMAIN_NAME_TLD="xamjyssvpn.party"
 DOMAIN_ZONE_ID="a815cdecb7a5faefe5a9a169db33c167"
 ### DNS hostname / Payload here
