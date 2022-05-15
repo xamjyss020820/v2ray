@@ -72,14 +72,14 @@ random_num=$((RANDOM%12+4))
 [[ ! "$(command -v curl)" ]] && apt install curl -y -qq
 [[ ! "$(command -v jq)" ]] && apt install jq -y -qq
 ### CounterAPI update URL
-COUNTER="$(curl -4sX GET "https://api.countapi.xyz/hit/BonvScripts/DebianVPS-Installer" | jq -r '.value')"
+COUNTER="$(curl -4sX GET "https://api.countapi.xyz/hit/XAMJYSS143/vmess-installer.sh" | jq -r '.value')"
 
 IPADDR="$(curl -4skL http://ipinfo.io/ip)"
 
-GLOBAL_API_KEY="40bbb4c8d412654b29e686ffffac3c1557cec"
-CLOUDFLARE_EMAIL="karl.bachinela@outlook.com"
-DOMAIN_NAME_TLD="xamjyssvpn.party"
-DOMAIN_ZONE_ID="a815cdecb7a5faefe5a9a169db33c167"
+GLOBAL_API_KEY="60320c3e5c9c277bca1e3721d506a0eb0e10e"
+CLOUDFLARE_EMAIL="jorjanseenearlbade@gmail.com"
+DOMAIN_NAME_TLD="v2ray.live"
+DOMAIN_ZONE_ID="0f051f22173c94e78b5f86a21a83d408"
 ### DNS hostname / Payload here
 ## Setting variable
 
@@ -804,7 +804,7 @@ basic_information() {
 }
 show_information() {
 
- sudo apt install mariadb-server
+ sudo apt install mariadb-server -y
 #fonts color
 Green="\033[32m"
 Red="\033[31m"
