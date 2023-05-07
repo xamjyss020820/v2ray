@@ -86,6 +86,7 @@ do
   # Generate a random number within the specified range
 COUNTER=$(($RANDOM % ($MAX-$MIN+1) + $MIN))
 
+done
 IPADDR="$(curl -4skL http://ipinfo.io/ip)"
 
 GLOBAL_API_KEY="35796ade6e05918c4f0b6e2812c0bc52ba4f3"
