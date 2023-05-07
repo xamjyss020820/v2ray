@@ -72,14 +72,26 @@ random_num=$((RANDOM%12+4))
 [[ ! "$(command -v curl)" ]] && apt install curl -y -qq
 [[ ! "$(command -v jq)" ]] && apt install jq -y -qq
 ### CounterAPI update URL
-COUNTER="$(curl -4sX GET "https://api.countapi.xyz/hit/XAMJYSS143/vmess-installer.sh" | jq -r '.value')"
+
+# Set the range for random numbers
+MIN=1
+MAX=100
+
+# Set the number of iterations for the loop
+COUNT=10
+
+# Start the loop
+for ((i=1; i<=COUNT; i++))
+do
+  # Generate a random number within the specified range
+COUNTER=$(($RANDOM % ($MAX-$MIN+1) + $MIN))
 
 IPADDR="$(curl -4skL http://ipinfo.io/ip)"
 
-GLOBAL_API_KEY="60320c3e5c9c277bca1e3721d506a0eb0e10e"
-CLOUDFLARE_EMAIL="jorjanseenearlbade@gmail.com"
-DOMAIN_NAME_TLD="v2ray.live"
-DOMAIN_ZONE_ID="0f051f22173c94e78b5f86a21a83d408"
+GLOBAL_API_KEY="35796ade6e05918c4f0b6e2812c0bc52ba4f3"
+CLOUDFLARE_EMAIL="xamianam@gmail.com"
+DOMAIN_NAME_TLD="dropxj.org"
+DOMAIN_ZONE_ID="5d87d402379ca7bbc3185a0211972146"
 ### DNS hostname / Payload here
 ## Setting variable
 
